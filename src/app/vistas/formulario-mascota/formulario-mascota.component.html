@@ -1,33 +1,30 @@
-<div class="container">
+<div class="container">  
   
-  <h3>MODIFICAR ID: {{detalleMascota.data.id}}</h3>  
-   
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 
-    <br>
+    <label for="id">ID: </label>
+    <input id="id" type="text" formControlName="id" class="form-control">
 
     <label for="nombre">NOMBRE: </label>
-    <input id="nombre" type="text" formControlName="nombre" class="form-control" placeholder="{{detalleMascota.data.nombre}}">
+    <input id="nombre" type="text" formControlName="nombre" class="form-control">
   
     <label for="especie">ESPECIE: </label>
-    <input id="especie" type="text" formControlName="especie" class="form-control" placeholder="{{detalleMascota.data.especie}}">
+    <input id="especie" type="text" formControlName="especie" class="form-control">
 
     <label for="raza">RAZA: </label>
-    <input id="raza" type="text" formControlName="raza" class="form-control" placeholder="{{detalleMascota.data.raza}}">
+    <input id="raza" type="text" formControlName="raza" class="form-control">
 
     <label for="sexo">SEXO: </label>
-    <input id="sexo" type="text" formControlName="sexo" class="form-control" placeholder="{{detalleMascota.data.sexo}}">     
+    <input id="sexo" type="text" formControlName="sexo" class="form-control">     
 
     <label for="edad">EDAD: </label>
-    <input id="edad" type="number" formControlName="edad" class="form-control" placeholder="{{detalleMascota.data.edad}}">
+    <input id="edad" type="number" formControlName="edad" class="form-control">
       
     <label for="nombrePropietario">NOMBRE DEL PROPIETARIO: </label>
-    <input id="nombrePropietario" type="text" formControlName="nombrePropietario" class="form-control" placeholder="{{detalleMascota.data.nombrePropietario}}">
+    <input id="nombrePropietario" type="text" formControlName="nombrePropietario" class="form-control">
 
     <br>
-    <p>Rellena algun campo para activar el boton.</p>
-    <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid">GUARDAR</button>
+    <button class="btn btn-primary" type="submit">GUARDAR</button>
   </form> 
-  <br>
-  <button class="btn btn-secondary" (click)="goBack()">VOLVER</button>
+  <button style="margin-top: 30px;" class="btn btn-secondary" (click)="goBack()">VOLVER</button>
 </div>  

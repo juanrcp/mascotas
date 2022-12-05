@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MascotasService } from '../../modelo/mascotas.service';
-import { MascotaInterfaz } from '../../modelo/mascota-interfaz';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { ThisReceiver } from '@angular/compiler';
 import { Location } from '@angular/common';
 
 @Component({
@@ -49,5 +45,4 @@ export class ListaMascotasComponent implements OnInit {
     this.detalleMascota = mascota;
 
   }
-
 }

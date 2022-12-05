@@ -24,12 +24,12 @@ export class MascotasService {
   }
 
   //Crear nuevo registro de mascota
-  newMascota(id: string, mascota: any){
-    return this.firebase.collection(this.coleccion).doc(id).update(mascota);
+  newMascota(mascota: any){
+    return this.firebase.collection(this.coleccion).add(mascota);
   }
 
   //Modificar mascota
-  updateMascota(id: string, mascota: MascotaInterfaz){
+  updateMascota(id: string, mascota: any){
     return this.firebase.collection(this.coleccion).doc(id).update(mascota);
   }
 

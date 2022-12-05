@@ -2,14 +2,15 @@
     <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">ID: {{detalleMascota.data.id}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">NOMBRE DE LA MASCOTA: {{detalleMascota.data.nombre}}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">NOMBRE DE LA MASCOTA: {{detalleMascota.data.nombre | uppercase}}</h6>
           <p class="card-text">ESPECIE: {{detalleMascota.data.especie}}</p>
           <p class="card-text">RAZA: {{detalleMascota.data.raza}}</p>
           <p class="card-text">EDAD: {{detalleMascota.data.edad}}</p>
           <p class="card-text">SEXO: {{detalleMascota.data.sexo}}</p>
           <p class="card-text">NOMBRE DEL PROPIETARIO: {{detalleMascota.data.nombrePropietario}}</p>
-          <a routerLink="/formulario-mascota/{{detalleMascota.id}}" class="card-link">EDITAR</a>
+          <button type="button" class="btn btn-warning" routerLink="/formulario-mascota/{{detalleMascota.id}}">EDITAR</button>
+          <button type="button" class="btn btn-danger" style="margin-left: 30px;" (click)="deleteMascota()">ELIMINAR</button>
         </div>
-        <button class="btn btn-primary" (click)="goBack()">VOLVER</button>
-    </div>
+      </div>
+      <button class="btn btn-primary" style="width: 18rem;" (click)="goBack()">VOLVER</button>
 </div>
