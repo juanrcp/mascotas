@@ -1,0 +1,15 @@
+<div class="container" *ngIf="detalleMascota">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">ID: {{detalleMascota.data.id}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">NOMBRE DE LA MASCOTA: {{detalleMascota.data.nombre}}</h6>
+          <p class="card-text">ESPECIE: {{detalleMascota.data.especie}}</p>
+          <p class="card-text">RAZA: {{detalleMascota.data.raza}}</p>
+          <p class="card-text">EDAD: {{detalleMascota.data.edad}}</p>
+          <p class="card-text">SEXO: {{detalleMascota.data.sexo}}</p>
+          <p class="card-text">NOMBRE DEL PROPIETARIO: {{detalleMascota.data.nombrePropietario}}</p>
+          <a routerLink="/formulario-mascota/{{detalleMascota.id}}" class="card-link">EDITAR</a>
+        </div>
+        <button class="btn btn-primary" (click)="goBack()">VOLVER</button>
+    </div>
+</div>

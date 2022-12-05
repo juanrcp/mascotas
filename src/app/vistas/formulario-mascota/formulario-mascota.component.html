@@ -1,0 +1,33 @@
+<div class="container">
+  
+  <h3>MODIFICAR ID: {{detalleMascota.data.id}}</h3>  
+   
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+    <br>
+
+    <label for="nombre">NOMBRE: </label>
+    <input id="nombre" type="text" formControlName="nombre" class="form-control" placeholder="{{detalleMascota.data.nombre}}">
+  
+    <label for="especie">ESPECIE: </label>
+    <input id="especie" type="text" formControlName="especie" class="form-control" placeholder="{{detalleMascota.data.especie}}">
+
+    <label for="raza">RAZA: </label>
+    <input id="raza" type="text" formControlName="raza" class="form-control" placeholder="{{detalleMascota.data.raza}}">
+
+    <label for="sexo">SEXO: </label>
+    <input id="sexo" type="text" formControlName="sexo" class="form-control" placeholder="{{detalleMascota.data.sexo}}">     
+
+    <label for="edad">EDAD: </label>
+    <input id="edad" type="number" formControlName="edad" class="form-control" placeholder="{{detalleMascota.data.edad}}">
+      
+    <label for="nombrePropietario">NOMBRE DEL PROPIETARIO: </label>
+    <input id="nombrePropietario" type="text" formControlName="nombrePropietario" class="form-control" placeholder="{{detalleMascota.data.nombrePropietario}}">
+
+    <br>
+    <p>Rellena algun campo para activar el boton.</p>
+    <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid">GUARDAR</button>
+  </form> 
+  <br>
+  <button class="btn btn-secondary" (click)="goBack()">VOLVER</button>
+</div>  

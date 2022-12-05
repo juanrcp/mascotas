@@ -1,0 +1,25 @@
+<div class="container">
+
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">NOMBRE</th>
+          <th scope="col">ESPECIE</th>
+          <th scope="col">NOMBRE DEL PROPIETARIO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mascota of mascotas">
+          <th scope="row">{{mascota.data.id}}</th>
+          <td>{{mascota.data.nombre}}</td>
+          <td>{{mascota.data.especie}}</td>
+          <td>{{mascota.data.nombrePropietario}}</td>
+          <td><button class="btn btn-primary" [class.selected]="mascota === detalleMascota" type="button" (click)="onSelect(mascota)">Detalles</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <app-detalle-mascota [detalleMascota]="detalleMascota"></app-detalle-mascota>
+</div>
+
