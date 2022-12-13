@@ -8,6 +8,7 @@ const routes: Routes = [
 
   {path: '', redirectTo: '/lista-mascotas', pathMatch: 'full'},
   {path:"lista-mascotas", component: ListaMascotasComponent}, 
+  {path:"lista-mascotas/:especie", component: ListaMascotasComponent},
   {path:"formulario-mascota/:id", component: FormularioMascotaComponent},
   {path:"formulario-mascota", component: FormularioMascotaComponent},  
   {path: '**', redirectTo: '/lista-mascotas'}

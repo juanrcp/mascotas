@@ -37,5 +37,11 @@ export class MascotasService {
   delete(id: string){
     return this.firebase.collection(this.coleccion).doc(id).delete();
   }
+
+  
+  getEspecie(especie: string){
+    return this.firebase.collection('mascotas', 
+    ref => ref.where('especie', '==', especie)). snapshotChanges();
+  }
   
 }
